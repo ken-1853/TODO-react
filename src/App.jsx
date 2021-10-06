@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
-import { CompleteTodos, completeTodos } from "./components/CompleteTodos";
+import { CompleteTodos } from "./components/CompleteTodos";
 import "./styles.css";
 
 export const App = () => {
@@ -50,7 +50,14 @@ export const App = () => {
 				todoText={todoText}
 				onChange={onChangeTodoText}
 				onClick={onClickAdd}
+				disabled={incompreteTodos.length >= 5}
 			/>
+
+			{incompreteTodos.length >= 5 && (
+				<p style={{ color: "red" }}>
+					登録できるTODOは5個までだよ〜〜！消化しよ〜
+				</p>
+			)}
 
 			<IncompleteTodos
 				todos={incompreteTodos}
