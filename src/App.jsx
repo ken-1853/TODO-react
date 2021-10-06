@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
-import { CompleteTodos, completeTodos } from "./components/CompleteTodos";
+import { CompleteTodos } from "./components/CompleteTodos";
 import "./styles.css";
 
 export const App = () => {
