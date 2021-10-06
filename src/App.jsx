@@ -3,12 +3,9 @@ import "./styles.css";
 
 export const App = () => {
 	const [todoText, setTodoText] = useState("");
-	const [incompreteTodos, setIncompleteTodos] = useState([
-		"てすと１",
-		"テスト2"
-	]);
+	const [incompreteTodos, setIncompleteTodos] = useState([]);
 
-	const [completeTodos, setCompleteTodos] = useState(["ijiji"]);
+	const [completeTodos, setCompleteTodos] = useState([]);
 
 	const onChangeTodoText = (e) => setTodoText(e.target.value);
 
